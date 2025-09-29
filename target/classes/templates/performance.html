@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Review</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; margin:0; padding:0; }
+        header { background: #FF9800; color: white; padding: 15px; text-align: center; }
+        .container { padding: 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #FF9800; color: white; }
+        input, select { padding: 8px; margin: 5px; }
+        input[type="submit"] { background: #FF9800; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background: #E68900; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Performance Review</h1>
+    </header>
+    <div class="container">
+        <form action="/admin/add-review" method="post">
+            <label>Employee ID:</label>
+            <input type="number" name="employeeId" required>
+            <label>Review Date:</label>
+            <input type="date" name="reviewDate" required>
+            <label>Score (1-10):</label>
+            <input type="number" name="score" min="1" max="10" required>
+            <label>Remarks:</label>
+            <input type="text" name="remarks">
+            <input type="submit" value="Add Review">
+        </form>
+
+        <h2>Reviews</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee ID</th>
+                    <th>Date</th>
+                    <th>Score</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2025-09-29</td>
+                    <td>9</td>
+                    <td>Excellent</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

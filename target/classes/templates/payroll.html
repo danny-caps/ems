@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0; padding: 0;
+        }
+        header { background: #2196F3; color: white; padding: 15px; text-align: center; }
+        .container { padding: 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #2196F3; color: white; }
+        input, select { padding: 8px; margin: 5px; }
+        input[type="submit"] { background: #2196F3; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background: #1976D2; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Payroll Management</h1>
+    </header>
+    <div class="container">
+        <form action="/admin/add-payroll" method="post">
+            <label>Employee ID:</label>
+            <input type="number" name="employeeId" required>
+            <label>Month:</label>
+            <input type="text" name="month" required>
+            <label>Salary Paid:</label>
+            <input type="number" name="salaryPaid" required>
+            <label>Bonus:</label>
+            <input type="number" name="bonus">
+            <label>Deductions:</label>
+            <input type="number" name="deductions">
+            <input type="submit" value="Add Payroll">
+        </form>
+
+        <h2>Payroll Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee ID</th>
+                    <th>Month</th>
+                    <th>Salary Paid</th>
+                    <th>Bonus</th>
+                    <th>Deductions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>September 2025</td>
+                    <td>$5000</td>
+                    <td>$200</td>
+                    <td>$50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
